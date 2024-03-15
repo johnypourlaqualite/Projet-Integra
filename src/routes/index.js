@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
 // Function to get Nutriscore of a product
 async function getNutriscore(productName) {
-  const url = `https://world.openfoodfacts.net/cgi/search.pl?search_terms=${productName}&fields=product_name,nutriscore_grade&json=true`;
+  const url = `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${productName}&fields=product_name,nutriscore_grade&json=true`;
   try {
     const response = await fetch(url);
     if (!response.ok) {

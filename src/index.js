@@ -44,7 +44,7 @@ server.on('error', (error) => {
 
 // Function to make the request and display the results
 function getNutriscore(productName) {
-  const url = `https://world.openfoodfacts.net/cgi/search.pl?search_terms=${productName}&fields=product_name,nutriscore_grade&json=true`;
+  const url = `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${productName}&fields=product_name,nutriscore_grade&json=true`; 
 
   fetch(url)
     .then(response => {
@@ -68,8 +68,10 @@ function getNutriscore(productName) {
 
 
 
+
+
 // Calling the function to retrieve the recipes
-getNutriscore("Poulet");
+getNutriscore("almond milk");
 
 
 export {getNutriscore};
